@@ -35,11 +35,12 @@ export const NotificationList = styled.div`
   background: rgba(0, 0, 0, 0.6);
   border-radius: 4px;
   padding: 15px 5px;
+  display: ${props => (props.visible ? 'block' : 'none')};
 
   &::before {
     content: '';
     position: absolute;
-    left: calc(50% - 20px);
+    left: calc(50% - 25px);
     top: -20px;
     width: 0;
     height: 0;
