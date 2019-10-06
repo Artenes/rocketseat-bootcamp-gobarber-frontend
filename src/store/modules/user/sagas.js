@@ -6,10 +6,10 @@ import { updateProfileFailure, updateProfileSuccess } from './actions';
 
 export function* updateProfile({ payload }) {
   try {
-    const { name, email, ...rest } = payload;
+    const { name, email, avatar_id, ...rest } = payload;
 
     const profile = Object.assign(
-      { name, email },
+      { name, email, avatar_id },
       rest.oldPassword ? rest : {}
     );
 
